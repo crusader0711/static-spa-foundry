@@ -1,0 +1,12 @@
+# pii-allowlist.txt: reviewed false positives for scripts/pii-scan.sh. Generic only; never put real PII here.
+# match: <regex>  fully matches the flagged text (case-insensitive)
+# path:  <glob>   skip files (matched against path and basename)
+# Inline alternative for a single line: add the marker  pii-scan:allow  to that line.
+match: [A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)*example\.(?:com|org|net)
+match: [A-Za-z0-9._%+-]+@users\.noreply\.github\.com
+match: (?:no-?reply|noreply)@[A-Za-z0-9.-]+
+match: (?:\+?1[\s.-]?)?(?:\(555\)\s?|555[\s.-])\d{3}[\s.-]\d{4}
+match: (?:\+?1[\s.-]?)?(?:\(\d{3}\)\s?|\d{3}[\s.-])555[\s.-]01\d\d
+path: config/pii-allowlist.txt
+# --- reviewed false positives specific to this repo ---
+# SVG path data (numeric strings that happen to be Luhn-valid); no text content

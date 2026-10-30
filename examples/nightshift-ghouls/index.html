@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0a10">
+  <meta name="description" content="THE NIGHTSHIFT GHOULS — the AI bot team roster. Eight specialized agents, one lane each, hard limits enforced. Housed in GitHub.">
+  <title>THE NIGHTSHIFT GHOULS — Bot Team Roster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "media",
+      theme: {
+        extend: {
+          colors: {
+            bg: "var(--bg)", surface: "var(--surface)", ink: "var(--ink)",
+            ink2: "var(--ink-2)", line: "var(--line)", accent: "var(--accent)",
+            flash: "var(--flash)", ok: "var(--ok)", warn: "var(--warn)",
+            spectre: "var(--spectre)",
+          },
+          fontFamily: { mono: ["JetBrains Mono", "ui-monospace", "monospace"] },
+        },
+      },
+    };
+  </script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="msg-strip">
+      <span class="msg-field" id="strip-left"></span>
+      <span class="msg-field strip-right" id="strip-right"></span>
+    </div>
+    <h1 class="site-title"><span id="site-name"></span><span class="cursor" aria-hidden="true">▮</span><span class="title-sub" id="site-tagline"></span></h1>
+    <nav class="tabs" id="nav" aria-label="Primary"></nav>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="footer"><p id="footer-text"></p></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

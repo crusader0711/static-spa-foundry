@@ -1,0 +1,32 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+permissions: { contents: read }
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: PII scan
+        env:
+          PII_DENYLIST_CONTENT: ${{ secrets.PII_DENYLIST }}
+        run: |
+          if [ -n "$PII_DENYLIST_CONTENT" ]; then
+            umask 077
+            printf '%s\n' "$PII_DENYLIST_CONTENT" > "$RUNNER_TEMP/pii-denylist.txt"
+            export PII_DENYLIST="$RUNNER_TEMP/pii-denylist.txt"
+          fi
+          ./scripts/pii-scan.sh
+      - run: ./scripts/lint.sh
+      - name: Smoke-test template and every example
+        run: ./scripts/test.sh
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: gitleaks/gitleaks-action@v2
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }

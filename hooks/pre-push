@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# pre-push: full-tree PII scan, then the full test suite must pass before push.
+set -uo pipefail
+./scripts/pii-scan.sh || exit 1
+./scripts/test.sh

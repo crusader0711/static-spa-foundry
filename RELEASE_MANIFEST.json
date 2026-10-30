@@ -1,0 +1,32 @@
+{
+  "name": "static-spa-foundry",
+  "version": "1.0.0",
+  "released": "2026-10-30T12:32:51Z",
+  "git_commit": "pre-release",
+  "artifacts": [
+    {
+      "path": "dist/docs-v1.0.0.tar.gz",
+      "sha256": "01a3691cb69562408014803cb660baba02a473223c4bd7d0887bb0172563edb9",
+      "size_bytes": 15185
+    },
+    {
+      "path": "dist/examples-v1.0.0.tar.gz",
+      "sha256": "9aa8b49eab4ea9e3dade69f5e7aa447076072bdfefe826cb9c0aaf89169f3152",
+      "size_bytes": 679763
+    },
+    {
+      "path": "dist/smoke-verifier-v1.0.0.tar.gz",
+      "sha256": "03675066daf18bb764955658ae52c0129644e4257d8eb520e3801bf6d6bb9582",
+      "size_bytes": 1688
+    },
+    {
+      "path": "dist/static-spa-template-v1.0.0.tar.gz",
+      "sha256": "d1584d9ad4fc3f161e3bde5a11d25058f2874a671af8edd3890a31cbc7553524",
+      "size_bytes": 12156
+    }
+  ],
+  "provenance": {
+    "built_by": "local",
+    "builder_id": "local"
+  }
+}

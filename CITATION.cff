@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use or reference this project, please cite it as below."
+title: "static-spa-foundry"
+type: software
+authors:
+  - name: "static-spa-foundry contributors"
+license: MIT
+version: 1.0.0
+abstract: "A template, development standard, and headless verifier for zero-backend, hash-routed static single-page apps, with worked examples."

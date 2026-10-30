@@ -1,0 +1,18 @@
+# --- secrets / env (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+# --- node / tooling ---
+node_modules/
+package-lock.json
+# --- build / release ---
+dist/
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.smoke-deps/
