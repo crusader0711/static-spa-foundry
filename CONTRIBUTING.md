@@ -20,3 +20,8 @@ Sign off commits (`git commit -s`) to certify you have the right to contribute u
 `dist/` is gitignored. `RELEASE_MANIFEST.json` lists the `dist/` tarballs; the committed `SHA256SUMS` covers the manifest and
 passes `sha256sum -c SHA256SUMS` on a clean clone. Tarballs are deterministic (sorted, fixed mtime); their hashes ship in
 `dist/SHA256SUMS` — attach both to the GitHub release.
+
+## Ideas / backlog
+- Record ideas for consideration in `docs/BACKLOG.md` (IDs `BL.NN`, status `proposed`, priority `5` high to `1` low).
+- Optionally open an issue using `.github/ISSUE_TEMPLATE/idea.yml` (label `idea`); opening an issue does not assign a `BL.NN` ID.
+- Idea text must contain no personal details, credentials, or private household/health/school/finance/location information.
