@@ -160,6 +160,7 @@ node ../static-spa-foundry/src/smoke.js .
 
 Then: README from `templates/PROJECT_README_TEMPLATE.md`, OPSEC review, and hand the package to the owner for repo creation, merge and Pages.
 Governance in one line: automation drafts, verifies and files evidence; **the owner merges, deploys and flips on Pages — every project, every time** (binding long form: `docs/DEVELOPMENT_STANDARD.md`).
+Ideas for consideration live in [docs/BACKLOG.md](docs/BACKLOG.md) (intake template: [.github/ISSUE_TEMPLATE/idea.yml](.github/ISSUE_TEMPLATE/idea.yml)).
 
 ---
 

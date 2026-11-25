@@ -30,6 +30,7 @@ make clean
 ## Rules
 - Read `docs/DEVELOPMENT_STANDARD.md` first; it is binding. Edit exactly three surfaces in a project: `js/data.js`, the TOKENS block in `css/style.css`, `js/custom.js`.
 - No credentials, tokens, keys, internal hostnames/IPs or personal data in any file. Example IPs use RFC 5737 ranges.
+- Backlog SoT is `docs/BACKLOG.md` (IDs `BL.NN`, never reused); idea text must pass the PII scan.
 - ## PII guard
   Every commit/push is scanned by `scripts/pii-scan.sh` (hooks + CI). Hits are removed or, if reviewed false positives, added to
   `config/pii-allowlist.txt`. An owner deny-list kept **outside** the repo can be supplied via `PII_DENYLIST=/path` (never commit it).

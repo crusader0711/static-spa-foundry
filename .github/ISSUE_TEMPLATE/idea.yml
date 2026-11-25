@@ -1,0 +1,38 @@
+name: Idea
+description: Propose an idea for consideration (recorded in docs/BACKLOG.md; opening an issue does not assign a BL.NN ID)
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `docs/BACKLOG.md` is the system of record. Opening this issue does not mint or assign a `BL.NN` ID — a row is added to `docs/BACKLOG.md` after intake.
+        Do not include personal details, credentials, or household, health, school, finance, or location data.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idea
+      description: Short, concrete description of the idea for consideration (public-safe wording only; no personal details).
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Idea consideration priority (5 = high to 1 = low; separate from any incident scoring).
+      options:
+        - "5 (high)"
+        - "4"
+        - "3"
+        - "2"
+        - "1 (low)"
+      default: 2
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / expected value
+      description: Optional background or problem this solves (no personal details or credentials).
+    validations:
+      required: false
